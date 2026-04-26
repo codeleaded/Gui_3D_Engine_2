@@ -1,193 +1,68 @@
-# Gui_3D_Engine_2
+# Project README
 
+## Overview
+This project is a simple 3D engine written in C. It allows for the creation and display of basic 3D scenes using a wireframe rendering technique.
 
-## Project Overview
+## Features
+- Basic 3D rendering
+- Wireframe drawing
+- Simple setup and execution
 
-This project implements specialized functionality related to 3d_engine_2.
-
-## Core Components
-
-### Main Functionality
-- Implements core algorithms for 3d_engine_2
-- Efficient data structures
-- Optimized performance
-- Clean code organization
-
-### Technical Features
-- C/C++ implementation
-- Dynamic memory management
-- Platform-independent design
-- Real-time capable
-
-### Architecture
-- Module separation
-- Clear interface design
-- Proper abstraction layers
-- Extensible design
-
-## Use Cases
-- Production systems
-- Educational purposes
-- Research applications
-- Performance-critical operations
-
-## Performance Characteristics
-- Optimized algorithms
-- Efficient memory usage
-- Scalable architecture
-- Minimal overhead
-
-## Implementation Quality
-- Well-organized code
-- Meaningful naming
-- Proper error handling
-- Memory management
-
-## Build and Deployment
-- Standard C/C++ compilation
-- Makefile-based building
-- Cross-platform support
-- Easy integration
-
-
-## Building the Project
+## Project Structure
+```
+<Gui_3D_Engine_2/>
+├── build/
+├── src/
+│   ├── Main.c
+│   └── *.h
+├── Makefile.linux
+├── Makefile.windows
+├── Makefile.wine
+└── README.md
+```
 
 ### Prerequisites
-- C/C++ Compiler (GCC, Clang, or MSVC)
+- C/C++ Compiler and Debugger (GCC, Clang)
 - Make utility
 - Standard development tools
+- X11 for Linux
 
-### Build Steps
-
-1. Navigate to project directory:
-```bash
-cd Gui_3D_Engine_2
-```
-
-2. Build the project:
-```bash
-make -f Makefile.(os) all
-```
-
-3. For clean rebuild:
-```bash
-make -f Makefile.(os) clean
-make -f Makefile.(os) all
-```
-
-4. If there are ./bin and ./libs directories, build libs with:
-```bash
-make -f Makefile.(os) cleanlib
-make -f Makefile.(os) lib
-```
-
-### Build Options
-```bash
-make -f Makefile.(os) all         # build output
-make -f Makefile.(os) do        # build + exe output
-make -f Makefile.(os) clean   # Remove build artifacts
-```
-
-## Running the Project
-
-Execute the compiled binary:
+## Build & Run
+To build the project on Linux:
 
 ```bash
-./build/Main(.exe)
+cd <Gui_3D_Engine_2>
+make -f Makefile.linux all
 ```
 
-Or using make:
+To run the project:
+
 ```bash
-make -f Makefile.(os) exe
+make -f Makefile.linux exe
 ```
 
-## Project Organization
+For Windows, ensure you have MinGW installed and then:
 
-```
-Gui_3D_Engine_2/
-├── src/
-│   ├── Main.c          # Entry point
-│   └── *.c             # Implementation files
-├── Makefile            # Build configuration
-└── README.md           # This file
+```bash
+cd <Gui_3D_Engine_2>
+make -f Makefile.windows all
+make -f Makefile.windows exe
 ```
 
-## Technical Details
+For Wine on Linux:
 
-### Language: C/C++
-- Performance-oriented
-- Direct hardware access where needed
-- Memory efficient
-- Widely portable
+```bash
+cd <Gui_3D_Engine_2>
+make -f Makefile.wine all
+make -f Makefile.wine exe
+```
 
-### Key Technologies
-- Standard C library
-- System-specific libraries as needed
-- Algorithm optimization
-- Efficient data structures
+To build for web, ensure you have Emscripten installed and then:
 
-### Code Quality
-- Clean, readable implementation
-- Proper error handling
-- Resource management
-- Well-documented algorithms
+```bash
+cd <Gui_3D_Engine_2>
+make -f Makefile.web all
+make -f Makefile.web exe
+```
 
-## Development Notes
-
-### Architecture Decisions
-- Modular design for reusability
-- Efficient algorithms for performance
-- Clear separation of concerns
-- Extensible structure
-
-### Performance Optimizations
-- Algorithm efficiency
-- Memory layout optimization
-- Cache-conscious programming
-- Minimal overhead
-
-### Portability
-- Cross-platform compatible
-- Platform-specific optimizations where possible
-- Standard library usage
-- No external dependencies (where feasible)
-
-## Troubleshooting
-
-### Build Issues
-- Ensure compiler is installed
-- Check file paths and permissions
-- Verify Make installation
-- Review compiler error messages
-
-### Runtime Issues
-- Check input data validity
-- Verify file accessibility
-- Ensure sufficient memory
-- Review output format
-
-### Performance Issues
-- Check compiler optimization flags
-- Profile hot code paths
-- Review algorithm complexity
-- Consider input size
-
-## Future Improvements
-
-Potential enhancements:
-- Additional optimization opportunities
-- Extended functionality
-- Platform-specific optimizations
-- Performance profiling
-
-## References
-
-For technical background:
-- Algorithm textbooks
-- Computer science references
-- Language documentation
-- Online educational resources
-
----
-
-*Project implementing practical algorithms and data structures in C/C++*
+Note: The project assumes a basic understanding of C programming and the use of make utilities for building projects.
