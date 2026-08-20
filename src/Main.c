@@ -118,7 +118,8 @@ void Setup(AlxWindow* w){
 
 void Update(AlxWindow* w){
     // Clear Screen
-	Clear(0);
+	Clear(BLACK);
+
 	// Set up rotation matrices
 	M4x4D matRotZ, matRotX;
 	fTheta += 1.0 * w->ElapsedTime;
@@ -233,7 +234,7 @@ void Delete(AlxWindow* w){
 }
 
 int main(){
-    if(Create("Game Test",400,300,4,4,Setup,Update,Delete))
+    if(Create("Game Test",1900,1000,1,1,Setup,Update,Delete))
         Start();
     return 0;
 }
